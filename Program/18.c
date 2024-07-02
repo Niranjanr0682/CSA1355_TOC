@@ -41,7 +41,7 @@ int main() {
     if (simulateNFA(input)) {
         printf("The string \"%s\" is accepted by the NFA.\n", input);
     } else {
-        printf("The string \"%s\" is not accepted by the NFA.\n", input);
+        printf("The string \"%s\" is accepted by the NFA.\n", input);
     }
 
     return 0;

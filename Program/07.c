@@ -1,25 +1,18 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include <string.h>
-
-// CFG recognition function
 bool belongsToCFG(char* str) {
     int len = strlen(str);
     int i = 0;
-
-    // Check if the string follows the rules
-    if (len < 4 || str[0] != '1' || str[len - 1] != '1') {
-        return false;
-    }
-
-    // Check the middle part (between the first and last '1')
+    if (len < 4 || str[0] != '1' || str[len - 1] != '1') 
+    {return false;}
     for (i = 1; i < len - 1; i++) {
         if (str[i] != '0' && str[i] != '1') {
-            return false; // Invalid character
+            return false;
         }
     }
 
-    return true; // String follows the CFG rules
+    return true;
 }
 
 int main() {
